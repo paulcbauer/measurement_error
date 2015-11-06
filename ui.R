@@ -20,7 +20,7 @@ library(plotrix)
   sidebarLayout(
     sidebarPanel(
 
-
+      h5(textOutput("hits")),
       sliderInput("times.measured", label = "Times measured:",
                   min = 0, max = 1000, value = 0, step = 1),
       sliderInput("size_systematic_error", label = "Add systematic error:",
