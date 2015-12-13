@@ -1,9 +1,3 @@
-# library(shiny)
-# library(BH)
-# library(stringr)
-# library(lattice)
-# library(latticeExtra)
-# library(psych) # enfernen?
 library(markdown)
 library(plotrix)
 
@@ -11,16 +5,11 @@ library(plotrix)
 
   shinyUI(fluidPage(
 
-  # Application title
   titlePanel("Measurement error (systematic and random)"),
 
-  # Sidebar with controls to select the random distribution type
-  # and number of observations to generate. Note the use of the
-  # br() element to introduce extra vertical spacing
   sidebarLayout(
     sidebarPanel(
 
-      h5(textOutput("hits")),
       sliderInput("times.measured", label = "Times measured:",
                   min = 0, max = 1000, value = 0, step = 1),
       sliderInput("size_systematic_error", label = "Add systematic error:",
